@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ACUA"
+    }
+  },
+  "defaultProject": "ACUA",
+  "cli": {
+    "analytics": "1d6762ad-dd4c-4b72-9e1d-9ffc3622ab5f"
+  }
 }
