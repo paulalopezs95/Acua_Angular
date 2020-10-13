@@ -1,18 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes} from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
 import { FooterComponent } from './footer/footer.component';
-import { InfoComponent } from './info/info.component';
-import { MenuComponent } from './oficinaVirtual/menu/menu.component';
-import { TicketsComponent } from './oficinaVirtual/tickets/tickets.component';
-import { PedidosComponent } from './oficinaVirtual/pedidos/pedidos.component';
-import { MisDatosComponent } from './oficinaVirtual/mis-datos/mis-datos.component';
-import { LoginComponent } from './acceso/login/login.component';
-import { RegistroComponent } from './acceso/registro/registro.component';
+import { InfoComponent } from './home/info/info.component';
+import { MenuComponent } from './home/oficinaVirtual/menu/menu.component';
+import { TicketsComponent } from './home/oficinaVirtual/tickets/tickets.component';
+import { PedidosComponent } from './home/oficinaVirtual/pedidos/pedidos.component';
+import { MisDatosComponent } from './home/oficinaVirtual/mis-datos/mis-datos.component';
+import { LoginComponent } from './home/acceso/login/login.component';
+import { RegistroComponent } from './home/acceso/registro/registro.component';
+
+const appRouter: Routes = [
+  {path: 'Ingreso', component: LoginComponent },
+  {path: 'Oficina', component: MenuComponent},
+  {path: '../Pedidos', component: PedidosComponent},
+  {path: 'Datos', component: MisDatosComponent},
+  {path: 'Tickets', component: TicketsComponent},
+  {path: '', component: InfoComponent  , pathMatch: 'full'}
+]     
 
 @NgModule({
   declarations: [
@@ -30,7 +40,9 @@ import { RegistroComponent } from './acceso/registro/registro.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    RouterModule.forRoot(appRouter)
   ],
   providers: [],
   bootstrap: [AppComponent]
