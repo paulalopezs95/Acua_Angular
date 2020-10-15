@@ -1,11 +1,15 @@
-/* Accordion Container */
+/* Index's Content Styles */
 
-.mainAccordion {
-    width: auto;
+#indexContent {
+    position: relative;
     height: auto;
-    background-color: #f6f1eb;
-    padding: 10px;
-}
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+  
+/* Accordion Container */
 
 .container {
     background-color: #f6f1eb;
@@ -17,6 +21,13 @@
     width: auto;
 }
 
+/* Accordion Container */
+.oficinaVirtualContainer {
+    width: auto;
+    height: auto;
+    background-color: #f6f1eb;
+    padding: 10px;
+}
 
 /*  TEXT ACCORDION */
 
