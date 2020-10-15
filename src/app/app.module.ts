@@ -17,8 +17,8 @@ import { RegistroComponent } from './home/acceso/registro/registro.component';
 
 const appRouter: Routes = [
   {path: 'Ingreso', component: LoginComponent },
-  {path: 'Oficina', component: MenuComponent},
-  {path: '../Pedidos', component: PedidosComponent},
+  {path: 'Oficina', component: PedidosComponent},
+  {path: 'Pedidos', component: PedidosComponent},
   {path: 'Datos', component: MisDatosComponent},
   {path: 'Tickets', component: TicketsComponent},
   {path: '', component: InfoComponent  , pathMatch: 'full'}
