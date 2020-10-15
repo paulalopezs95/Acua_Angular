@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScriptManagerService } from 'src/app/script-manager.service';
 
 @Component({
   selector: 'app-pedidos',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scriptManager: ScriptManagerService) { }
 
   ngOnInit(): void {
+    this.scriptManager.cargarScript(['accordion']);
   }
 
 }
